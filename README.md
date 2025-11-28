@@ -111,10 +111,10 @@ La arquitectura está compuesta por tres capas principales: (1) Frontend despleg
 * Frontend
   https://github.com/DeltaBairon/DeltaBairon-LibroTech_FrontEnd/tree/main
 
-* Backend
+* APi 
   https://github.com/DeltaBairon/LibroTech_Backend
 
-* APi
+* Backend
   https://github.com/DeltaBairon/LibroTech_Backend_nube
 
 
