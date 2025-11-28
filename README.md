@@ -11,12 +11,114 @@ La arquitectura está compuesta por tres capas principales: (1) Frontend despleg
 (2) Backend API en Render/Railway,
 (3) Base de datos en la nube (Railway / Supabase / PlanetScale). Flujo general: Frontend → API REST → Base de Datos → Respuesta JSON → UI Actualizada. Diagrama detallado disponible en docs/arquitectura.md.
 
+┌──────────────┐
+│   USUARIO    │
+└──────┬───────┘
+       │ 1. Interacción
+       ▼
+┌──────────────────────────────────────┐
+│         FRONTEND                      │
+│  (HTML + CSS + JavaScript)            │
+├──────────────────────────────────────┤
+│                                       │
+│  2. Validación de Datos               │
+│  3. Construcción de Request           │
+│                                       │
+│  fetch(API_URL + '/api/libros', {    │
+│    method: 'POST',                    │
+│    headers: {                         │
+│      'Content-Type': 'application/json'│
+│    },                                 │
+│    body: JSON.stringify(datos)        │
+│  })                                   │
+└──────┬───────────────────────────────┘
+       │ 4. HTTP Request
+       │ (JSON)
+       ▼
+┌──────────────────────────────────────┐
+│         BACKEND API                   │
+│  (Python Flask / Node.js Express)     │
+├──────────────────────────────────────┤
+│                                       │
+│  5. Recepción de Request              │
+│  6. Validación en Servidor            │
+│  7. Lógica de Negocio                 │
+│                                       │
+│  @app.route('/api/libros', methods=['POST'])│
+│  def crear_libro():                   │
+│    datos = request.json               │
+│    # Validar datos                    │
+│    # Construir query SQL              │
+└──────┬───────────────────────────────┘
+       │ 8. SQL Query
+       │
+       ▼
+┌──────────────────────────────────────┐
+│       BASE DE DATOS                   │
+│     (MySQL / PostgreSQL)              │
+├──────────────────────────────────────┤
+│                                       │
+│  9. Ejecutar Query                    │
+│  10. Validar Integridad               │
+│  11. Guardar Datos                    │
+│                                       │
+│  INSERT INTO libros                   │
+│  (titulo, autor, isbn)                │
+│  VALUES (?, ?, ?)                     │
+└──────┬───────────────────────────────┘
+       │ 12. Resultado
+       │
+       ▼
+┌──────────────────────────────────────┐
+│         BACKEND API                   │
+│                                       │
+│  13. Formatear Respuesta              │
+│  14. Agregar Status Codes             │
+│                                       │
+│  return {                             │
+│    "status": "success",               │
+│    "data": {                          │
+│      "id": 1,                         │
+│      "titulo": "...",                 │
+│      "autor": "..."                   │
+│    }                                  │
+│  }                                    │
+└──────┬───────────────────────────────┘
+       │ 15. HTTP Response
+       │ (JSON)
+       ▼
+┌──────────────────────────────────────┐
+│         FRONTEND                      │
+│                                       │
+│  16. Parsear Respuesta                │
+│  17. Actualizar UI                    │
+│  18. Mostrar Feedback                 │
+│                                       │
+│  .then(response => response.json())   │
+│  .then(data => {                      │
+│    mostrarMensaje('Libro creado');    │
+│    actualizarLista();                 │
+│  })                                   │
+└──────┬───────────────────────────────┘
+       │ 19. Resultado visual
+       ▼
+┌──────────────┐
+│   USUARIO    │
+│  (Ve cambio) │
+└──────────────┘
+
 ## 🌐 URLs de la Aplicación
-Frontend: https://librotech.vercel.app  
-Backend API: https://librotech-api.onrender.com  
-GitHub Project: https://github.com/DeltaBairon/LibroTech_Projects  
-Repositorio Integrador: https://github.com/DeltaBairon/LibroTech_Projects  
-Video Demostrativo: https://www.youtube.com/watch?v=[tu-id]
+
+* Frontend
+  https://github.com/DeltaBairon/DeltaBairon-LibroTech_FrontEnd/tree/main
+
+* Backend
+  https://github.com/DeltaBairon/LibroTech_Backend
+
+* APi
+  https://github.com/DeltaBairon/LibroTech_Backend_nube
+
+
 
 ## 📁 Estructura del Repositorio
 LibroTech_Projects/  
