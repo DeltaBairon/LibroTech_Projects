@@ -1,17 +1,5 @@
 
-// En frontend/js/app.js
-// Cambia esta línea al inicio del archivo:
-
-// ANTES:
-// const API_URL = 'http://localhost:4000';
-
-// DESPUÉS (para producción en EC2):
-const API_URL = window.location.hostname === 'localhost' 
-    ? 'http://localhost:4000' 
-    : 'http://api:4000'; // Usa el nombre del servicio Docker
-
-// O si quieres usar la IP pública de EC2:
-// const API_URL = 'http://TU_IP_PUBLICA:4000';
+const API_URL ='http://api:4000'; 
 
 // ========== DATOS LOCALES (cache temporal) ==========
 let datos = {
