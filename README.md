@@ -12,7 +12,6 @@
 ### ☁️ Cloud & Deployment
 ![AWS](https://img.shields.io/badge/AWS-Deployed-orange?logo=amazonaws)
 ![AWS EC2](https://img.shields.io/badge/AWS%20EC2-Compute-FF9900?logo=amazonec2)
-![AWS RDS](https://img.shields.io/badge/AWS%20RDS-Database-527FFF?logo=amazonrds)
 ![AWS S3](https://img.shields.io/badge/AWS%20S3-Storage-569A31?logo=amazons3)
 ![Azure](https://img.shields.io/badge/Azure-Deployed-blue?logo=microsoftazure)
 ![Azure App Service](https://img.shields.io/badge/Azure%20App%20Service-Web%20App-0078D4?logo=microsoftazure)
