@@ -108,6 +108,8 @@ La arquitectura está compuesta por tres capas principales: (1) Frontend despleg
 (3) Base de datos en la nube (Railway / Supabase / PlanetScale). Flujo general: Frontend → API REST → Base de Datos → Respuesta JSON → UI Actualizada. Diagrama detallado disponible en docs/arquitectura.md.
 
 ```
+## 🔄 Flujo de Comunicación Frontend - Backend - Base de Datos
+```plaintext
 ┌──────────────┐
 │   USUARIO    │
 └──────┬───────┘
@@ -199,6 +201,7 @@ La arquitectura está compuesta por tres capas principales: (1) Frontend despleg
 │   USUARIO    │
 │  (Ve cambio) │
 └──────────────┘
+```
 ```
 
 
