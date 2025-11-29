@@ -31,10 +31,9 @@
 ![IP Whitelisting](https://img.shields.io/badge/IP%20Whitelisting-Enabled-green?logo=security)
 ![SSL/TLS](https://img.shields.io/badge/SSL%2FTLS-Encrypted-success?logo=letsencrypt)
 
-### 🛠️ Development & CI/CD
+### 🛠️ Development 
 ![VSCode](https://img.shields.io/badge/VS%20Code-Editor-blue?logo=visualstudiocode)
 ![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=githubactions)
 ![NPM](https://img.shields.io/badge/NPM-Package%20Manager-red?logo=npm)
 
 ### 📊 Project Status
