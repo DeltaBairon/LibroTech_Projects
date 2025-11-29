@@ -1,0 +1,58 @@
+# ============================================
+# Node.js / Express API - .gitignore
+# ============================================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+.env.test
+.env.production
+.env.local
+
+# Node modules
+node_modules/
+
+# Build / compiled output
+dist/
+build/
+.tmp/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDE / Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Nodemon persistence
+nodemon.json
+
+# TypeScript (por si usas algo en TS)
+*.tsbuildinfo
+
+# PostgreSQL backups
+*.sql
+*.dump
