@@ -4,32 +4,40 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+// ⭐ Azure usa process.env.PORT
 const PORT = process.env.PORT || 4000;
+const HOST = '0.0.0.0'; // ⭐ IMPORTANTE para Azure
 
 // Función para iniciar el servidor
 const startServer = async () => {
     try {
-        console.log('🚀 Iniciando servidor...');
+        console.log('🚀 Iniciando servidor LibroTech...');
         console.log('📡 Puerto:', PORT);
+        console.log('🌍 Host:', HOST);
         console.log('🗄️  Base de datos:', process.env.DB_NAME);
-        console.log('🌐 Host:', process.env.DB_HOST);
+        console.log('🌐 DB Host:', process.env.DB_HOST);
         
         // Probar conexión a la base de datos
         const connected = await testConnection();
         
         if (!connected) {
-            console.error('\n❌ No se pudo conectar a la base de datos');
-            console.error('⚠️  El servidor continuará, pero las peticiones fallarán\n');
+            console.error('\n⚠️  ADVERTENCIA: No se pudo conectar a la base de datos');
+            console.error('   El servidor continuará pero las peticiones pueden fallar\n');
+        } else {
+            console.log('✅ Base de datos conectada correctamente');
         }
         
-        // Iniciar servidor
-        app.listen(PORT, () => {
-            console.log(`\n✅ Servidor corriendo en http://localhost:${PORT}`);
-            console.log('📝 Endpoints disponibles:');
-            console.log(`   - GET/POST    http://localhost:${PORT}/libros`);
-            console.log(`   - GET/POST    http://localhost:${PORT}/autores`);
-            console.log(`   - GET/POST    http://localhost:${PORT}/categorias`);
-            console.log(`   - GET/POST    http://localhost:${PORT}/editoriales`);
+        // ⭐ Iniciar servidor con HOST '0.0.0.0' para Azure
+        app.listen(PORT, HOST, () => {
+            console.log(`\n✅ Servidor LibroTech corriendo en puerto ${PORT}`);
+            console.log(`🌐 URL: http://${HOST}:${PORT}`);
+            console.log('\n📝 Endpoints disponibles:');
+            console.log(`   - GET  /                  → Info de la API`);
+            console.log(`   - GET  /health            → Health check`);
+            console.log(`   - CRUD /libros            → Gestión de libros`);
+            console.log(`   - CRUD /autores           → Gestión de autores`);
+            console.log(`   - CRUD /categorias        → Gestión de categorías`);
+            console.log(`   - CRUD /editoriales       → Gestión de editoriales`);
             console.log('\n🛑 Presiona CTRL+C para detener el servidor\n');
         });
         
@@ -38,5 +46,15 @@ const startServer = async () => {
         process.exit(1);
     }
 };
+
+// Manejo de errores no capturados
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('❌ Unhandled Rejection:', reason);
+});
+
+process.on('uncaughtException', (error) => {
+    console.error('❌ Uncaught Exception:', error);
+    process.exit(1);
+});
 
 startServer();
