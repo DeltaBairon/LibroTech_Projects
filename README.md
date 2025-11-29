@@ -1,23 +1,35 @@
-# 🚀 Proyecto Integrado Full Stack
-
 ![HTML5](https://img.shields.io/badge/HTML5-Markup-orange?logo=html5)
 ![CSS3](https://img.shields.io/badge/CSS3-Styling-blue?logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?logo=javascript)
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-green?logo=nodedotjs)
 ![Express](https://img.shields.io/badge/Express-Framework-black?logo=express)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-blue?logo=postgresql)
-![Docker](https://img.shields.io/badge/Docker-20.10%2B-blue?logo=docker)
+
+### 🏗️ Arquitectura Multi-Cloud Híbrida
+![Architecture](https://img.shields.io/badge/Architecture-Multi--Cloud%20Hybrid-blueviolet?logo=icloud)
+![Docker](https://img.shields.io/badge/Docker-Frontend%20%26%20Backend-2496ED?logo=docker)
+![AWS EC2](https://img.shields.io/badge/AWS%20EC2-Application%20Host-FF9900?logo=amazonec2)
+![Azure SQL](https://img.shields.io/badge/Azure%20SQL-Database%20Layer-0078D4?logo=microsoftazure)
+![VPN](https://img.shields.io/badge/Azure%20VNet-Private%20Network-0078D4?logo=microsoftazure)
+![REST API](https://img.shields.io/badge/REST%20API-Cross%20Cloud-success?logo=fastapi)
+
+### ☁️ Cloud Infrastructure
+**AWS (Compute Layer)**
+![AWS EC2](https://img.shields.io/badge/AWS%20EC2-Dockerized%20Apps-FF9900?logo=amazonec2)
 ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Orchestration-2496ED?logo=docker)
+![Elastic IP](https://img.shields.io/badge/Elastic%20IP-Whitelisted-FF9900?logo=amazonaws)
 
-### ☁️ Cloud & Deployment
-![AWS](https://img.shields.io/badge/AWS-Deployed-orange?logo=amazonaws)
-![AWS EC2](https://img.shields.io/badge/AWS%20EC2-Compute-FF9900?logo=amazonec2)
-![AWS S3](https://img.shields.io/badge/AWS%20S3-Storage-569A31?logo=amazons3)
-![Azure](https://img.shields.io/badge/Azure-Deployed-blue?logo=microsoftazure)
-![Azure App Service](https://img.shields.io/badge/Azure%20App%20Service-Web%20App-0078D4?logo=microsoftazure)
-![Azure SQL](https://img.shields.io/badge/Azure%20SQL-Database-0078D4?logo=microsoftazure)
+**Azure (Database Layer)**
+![Azure SQL](https://img.shields.io/badge/Azure%20SQL-Production%20DB-0078D4?logo=microsoftazure)
+![Azure Firewall](https://img.shields.io/badge/Azure%20Firewall-EC2%20IP%20Allowed-0078D4?logo=microsoftazure)
+![Private Endpoint](https://img.shields.io/badge/Private%20Endpoint-Secure%20Connection-0078D4?logo=microsoftazure)
 
-### 🛠️ Development Tools
+### 🔐 Security & Networking
+![Cross-Cloud](https://img.shields.io/badge/Cross--Cloud-Connectivity-purple?logo=cloudflare)
+![IP Whitelisting](https://img.shields.io/badge/IP%20Whitelisting-Enabled-green?logo=security)
+![SSL/TLS](https://img.shields.io/badge/SSL%2FTLS-Encrypted-success?logo=letsencrypt)
+
+### 🛠️ Development & CI/CD
 ![VSCode](https://img.shields.io/badge/VS%20Code-Editor-blue?logo=visualstudiocode)
 ![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=githubactions)
@@ -28,7 +40,12 @@
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue?logo=semver)
 ![License](https://img.shields.io/badge/License-MIT-green?logo=opensourceinitiative)
 ![Build](https://img.shields.io/badge/Build-Passing-success?logo=github)
+![Uptime](https://img.shields.io/badge/Uptime-99.9%25-brightgreen?logo=statuspage)
 
+---
+
+## 📐 Diagrama de Arquitectura
+```plaintext
 # 📚 LibroTech – Proyecto Full-Stack Integrado
 Sistema completo para la gestión de una biblioteca virtual, desarrollado como proyecto de integración Full-Stack. 
 Incluye frontend, backend, base de datos en la nube, tablero Kanban, documentación técnica y video demostrativo.
