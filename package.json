@@ -1,20 +1,16 @@
 {
   "name": "api-libreria",
   "version": "1.0.0",
-  "description": "LibroTech Backend API",
-  "type": "module",
-  "main": "src/server.js",
+  "description": "",
+  "main": "./src/server.js",
   "scripts": {
+    "type": "module",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js"
   },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
-  },
-  "keywords": ["api", "library", "books", "librotech"],
-  "author": "DeltaBairon",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
