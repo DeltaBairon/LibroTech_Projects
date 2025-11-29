@@ -10,14 +10,13 @@ import librosRoutes from "./routes/libros.routes.js";
 
 const app = express();
 
-// Para ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(cors());
 app.use(express.json());
 
-// SERVIR ARCHIVOS ESTÁTICOS DEL FRONTEND
+// Servir frontend
 app.use(express.static(path.join(__dirname, 'frontend')));
 
 // Rutas API
@@ -26,12 +25,11 @@ app.use("/categorias", categoriasRoutes);
 app.use("/editoriales", editorialesRoutes);
 app.use("/libros", librosRoutes);
 
-// Health check
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'healthy', uptime: process.uptime() });
+  res.json({ status: 'healthy' });
 });
 
-// Cualquier otra ruta sirve el frontend
+// Servir index.html para cualquier otra ruta
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
