@@ -115,84 +115,84 @@ La arquitectura está compuesta por tres capas principales: (1) Frontend despleg
        │ 1. Interacción
        ▼
 ┌──────────────────────────────────────────────┐
-│                 FRONTEND                      │
-│        (HTML + CSS + JavaScript)              │
+│                 FRONTEND                     │
+│        (HTML + CSS + JavaScript)             │
 ├──────────────────────────────────────────────┤
 │                                              │
 │  2. Validación de Datos                      │
-│  3. Construcción de Request                   │
+│  3. Construcción de Request                  │
 │                                              │
-│  fetch(API_URL + '/api/libros', {             │
-│    method: 'POST',                            │
-│    headers: {                                 │
-│      'Content-Type': 'application/json'       │
-│    },                                         │
-│    body: JSON.stringify(datos)                │
-│  })                                           │
+│  fetch(API_URL + '/api/libros', {            │
+│    method: 'POST',                           │
+│    headers: {                                │
+│      'Content-Type': 'application/json'      │
+│    },                                        │
+│    body: JSON.stringify(datos)               │
+│  })                                          │
 └───────────────┬──────────────────────────────┘
                 │ 4. HTTP Request (JSON)
                 ▼
 ┌──────────────────────────────────────────────┐
-│                 BACKEND API                   │
-│      (Python Flask / Node.js Express)         │
+│                 BACKEND API                  │
+│      (Python Flask / Node.js Express)        │
 ├──────────────────────────────────────────────┤
 │                                              │
-│  5. Recepción de Request                      │
-│  6. Validación en Servidor                    │
-│  7. Lógica de Negocio                         │
+│  5. Recepción de Request                     │
+│  6. Validación en Servidor                   │
+│  7. Lógica de Negocio                        │
 │                                              │
-│  @app.route('/api/libros', methods=['POST'])  │
-│  def crear_libro():                           │
-│    datos = request.json                       │
-│    # Validar datos                            │
-│    # Construir query SQL                      │
+│  @app.route('/api/libros', methods=['POST']) │
+│  def crear_libro():                          │
+│    datos = request.json                      │
+│    # Validar datos                           │
+│    # Construir query SQL                     │
 └───────────────┬──────────────────────────────┘
                 │ 8. SQL Query
                 ▼
 ┌──────────────────────────────────────────────┐
-│                BASE DE DATOS                  │
-│             (MySQL / PostgreSQL)              │
+│                BASE DE DATOS                 │
+│             (MySQL / PostgreSQL)             │
 ├──────────────────────────────────────────────┤
 │                                              │
-│  9. Ejecutar Query                            │
-│  10. Validar Integridad                       │
-│  11. Guardar Datos                            │
+│  9. Ejecutar Query                           │
+│  10. Validar Integridad                      │
+│  11. Guardar Datos                           │
 │                                              │
-│  INSERT INTO libros                           │
-│  (titulo, autor, isbn)                        │
-│  VALUES (?, ?, ?)                             │
+│  INSERT INTO libros                          │
+│  (titulo, autor, isbn)                       │
+│  VALUES (?, ?, ?)                            │
 └───────────────┬──────────────────────────────┘
                 │ 12. Resultado
                 ▼
 ┌──────────────────────────────────────────────┐
-│                 BACKEND API                   │
+│                 BACKEND API                  │
 ├──────────────────────────────────────────────┤
-│  13. Formatear Respuesta                      │
-│  14. Agregar Status Codes                     │
+│  13. Formatear Respuesta                     │
+│  14. Agregar Status Codes                    │
 │                                              │
-│  return {                                     │
-│    "status": "success",                       │
-│    "data": {                                  │
-│      "id": 1,                                 │
-│      "titulo": "...",                         │
-│      "autor": "..."                           │
-│    }                                          │
-│  }                                            │
+│  return {                                    │
+│    "status": "success",                      │
+│    "data": {                                 │
+│      "id": 1,                                │
+│      "titulo": "...",                        │
+│      "autor": "..."                          │
+│    }                                         │
+│  }                                           │
 └───────────────┬──────────────────────────────┘
                 │ 15. HTTP Response (JSON)
                 ▼
 ┌──────────────────────────────────────────────┐
-│                 FRONTEND                      │
+│                 FRONTEND                     │
 ├──────────────────────────────────────────────┤
-│  16. Parsear Respuesta                        │
-│  17. Actualizar UI                            │
-│  18. Mostrar Feedback                         │
+│  16. Parsear Respuesta                       │
+│  17. Actualizar UI                           │
+│  18. Mostrar Feedback                        │
 │                                              │
-│  .then(response => response.json())           │
-│  .then(data => {                              │
-│    mostrarMensaje('Libro creado');            │
-│    actualizarLista();                         │
-│  })                                           │
+│  .then(response => response.json())          │
+│  .then(data => {                             │
+│    mostrarMensaje('Libro creado');           │
+│    actualizarLista();                        │
+│  })                                          │
 └───────────────┬──────────────────────────────┘
                 │ 19. Resultado visual
                 ▼
