@@ -1,0 +1,16 @@
+# .dockerignore para Api/
+# Guarda esto como: Api/.dockerignore
+
+node_modules
+npm-debug.log
+.env.local
+.env.development
+.git
+.gitignore
+README.md
+.DS_Store
+*.log
+coverage
+.vscode
+.idea
+
