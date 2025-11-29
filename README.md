@@ -1,3 +1,35 @@
+# 🚀 Proyecto Integrado Full Stack
+
+![HTML5](https://img.shields.io/badge/HTML5-Markup-orange?logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-blue?logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?logo=javascript)
+![Node.js](https://img.shields.io/badge/Node.js-18%2B-green?logo=nodedotjs)
+![Express](https://img.shields.io/badge/Express-Framework-black?logo=express)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-blue?logo=postgresql)
+![Docker](https://img.shields.io/badge/Docker-20.10%2B-blue?logo=docker)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Orchestration-2496ED?logo=docker)
+
+### ☁️ Cloud & Deployment
+![AWS](https://img.shields.io/badge/AWS-Deployed-orange?logo=amazonaws)
+![AWS EC2](https://img.shields.io/badge/AWS%20EC2-Compute-FF9900?logo=amazonec2)
+![AWS RDS](https://img.shields.io/badge/AWS%20RDS-Database-527FFF?logo=amazonrds)
+![AWS S3](https://img.shields.io/badge/AWS%20S3-Storage-569A31?logo=amazons3)
+![Azure](https://img.shields.io/badge/Azure-Deployed-blue?logo=microsoftazure)
+![Azure App Service](https://img.shields.io/badge/Azure%20App%20Service-Web%20App-0078D4?logo=microsoftazure)
+![Azure SQL](https://img.shields.io/badge/Azure%20SQL-Database-0078D4?logo=microsoftazure)
+
+### 🛠️ Development Tools
+![VSCode](https://img.shields.io/badge/VS%20Code-Editor-blue?logo=visualstudiocode)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=githubactions)
+![NPM](https://img.shields.io/badge/NPM-Package%20Manager-red?logo=npm)
+
+### 📊 Project Status
+![Status](https://img.shields.io/badge/Status-Production-brightgreen?logo=checkmarx)
+![Version](https://img.shields.io/badge/Version-1.0.0-blue?logo=semver)
+![License](https://img.shields.io/badge/License-MIT-green?logo=opensourceinitiative)
+![Build](https://img.shields.io/badge/Build-Passing-success?logo=github)
+
 # 📚 LibroTech – Proyecto Full-Stack Integrado
 Sistema completo para la gestión de una biblioteca virtual, desarrollado como proyecto de integración Full-Stack. 
 Incluye frontend, backend, base de datos en la nube, tablero Kanban, documentación técnica y video demostrativo.
