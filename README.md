@@ -106,7 +106,10 @@ La arquitectura está compuesta por tres capas principales: (1) Frontend despleg
 ```
 
 
-## 🌐 URLs de la Aplicación
+## 🌐 URLS de la Aplicación
+
+* APP DESPLEGADA
+  http://98.83.32.68/
 
 * Frontend
   https://github.com/DeltaBairon/DeltaBairon-LibroTech_FrontEnd/tree/main
